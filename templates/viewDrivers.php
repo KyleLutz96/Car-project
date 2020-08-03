@@ -3,16 +3,25 @@
 <head>
 <style>
 
-td,th {  padding: 5px;  border-bottom: 1px solid #aaa; text-align: center;}
-.center{text-align: center; display: inline-block;}
-body{text-align: center;}
+td,th{  
+  padding: 5px;  
+  border-bottom: 1px solid #aaa; 
+  text-align: center;
+}
+.center{
+  text-align: center; 
+  display: inline-block;
+}
+body{
+  text-align: center;
+}
 
 </style>
 </head>
 
 <body>
 <div>
-<h1>Manage Drivers</h1>
+  <h1>Manage Drivers</h1>
 </div>
 
 
@@ -42,7 +51,7 @@ body{text-align: center;}
 </div>
 
 <div>
-<a href="/index.php">Back to home</a>
+  <a href="/index.php">Back to home</a>
 </div>
 
 </body>
