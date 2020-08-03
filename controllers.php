@@ -1,13 +1,11 @@
 <?php
-// controllers.php
-function main_action()
-{
-    require 'templates/main.php';
+
+function main_action(){
+   require 'templates/main.php';
 }
 
-function addCarFormAction()
-{
-    require 'templates/addCar.php';
+function addCarFormAction(){
+   require 'templates/addCar.php';
 }
 
 function addCarAction(){
@@ -15,20 +13,18 @@ function addCarAction(){
    require 'templates/addCar.php';
 }
 
-function viewCarsAction()
-{
-    $cars = getAllCars();
-    require 'templates/viewCars.php';
+function viewCarsAction(){
+   $cars = getAllCars();
+   require 'templates/viewCars.php';
 }
 
-function searchCarsAction($option1, $search1, $option2 = null, $search2 = null)
-{
+function searchCarsAction($option1, $search1, $option2 = null, $search2 = null){
    if($option1 && $search1){
-       if($option2 && $search2){
-           $cars = searchCars($option1, $search1, $option2, $search2);
-       }else{
-           $cars = searchCars($option1, $search1);
-       }
+      if($option2 && $search2){
+         $cars = searchCars($option1, $search1, $option2, $search2);
+      }else{
+         $cars = searchCars($option1, $search1);
+      }
    }elseif($option2 && $search2){
       $cars = searchCars($option2, $search2);
    }else{
@@ -38,22 +34,13 @@ function searchCarsAction($option1, $search1, $option2 = null, $search2 = null)
    require 'templates/viewCars.php';
 }
 
-function deleteCarAction($id)
-{
+function deleteCarAction($id){
   $cars =  deleteCar($id);
-  $_POST =  array();
-
-  
-// echo " after get all cars ";
   require 'templates/viewCars.php';
-
 }
 
-
-
-function addDriverFormAction()
-{
-    require 'templates/addDriver.php';
+function addDriverFormAction(){
+   require 'templates/addDriver.php';
 }
 
 function addDriverAction(){
@@ -64,7 +51,6 @@ function addDriverAction(){
 function deleteDriverAction($id){
    $drivers =  deleteDriver($id);
    require 'templates/viewDrivers.php';
-
 }
 
 function viewDriversAction(){
@@ -75,7 +61,6 @@ function viewDriversAction(){
 function linkDriverAction(){
    $data = getLinkedDrivers();
    require 'templates/linkDriver.php';
-
 }
 
 

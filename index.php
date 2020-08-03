@@ -1,7 +1,5 @@
 <?php 
-// index.php
 
-// load and initialize any global libraries
 require_once 'model.php';
 require_once 'controllers.php';
 
@@ -18,13 +16,12 @@ if ('/index.php' === $uri) {
    }
 
 }elseif('/index.php/viewCars' === $uri) {
-
     if(isset($_POST['deleteCar'])){
-	deleteCarAction($_POST['deleteCar']);
+        deleteCarAction($_POST['deleteCar']);
     }elseif(( isset($_GET['option1']) && isset($_GET['search1'])) || ( isset($_GET['option2']) && isset($_GET['search2'])) ){
         searchCarsAction($_GET['option1'], $_GET['search1'], $_GET['option2'], $_GET['search2']);
     }else {
-	viewCarsAction();
+        viewCarsAction();
     }
 
 }elseif('/index.php/addDriver' === $uri) {
