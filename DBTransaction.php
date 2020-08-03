@@ -17,7 +17,6 @@ public function __construct(){
 public function insertTransaction($sql, $data){
     $stmt = $this->pdo->prepare($sql);
 	$stmt->execute($data);
-	$this->last_insert_id = $this->pdo->lastInsertId();
 }
 
 public function submitTransaction(){        
